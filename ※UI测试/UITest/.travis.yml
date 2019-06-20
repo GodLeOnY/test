@@ -1,0 +1,11 @@
+language: objective-c
+xcode-project: UITest/UITest.xcodeproj
+xcode-scheme: UITest
+osx_image: xcode10.2
+
+script:
+- set -o pipefail
+- xcodebuild test -project "$TRAVIS_XCODE_PROJECT" -scheme "$TRAVIS_XCODE_SCHEME" -idestinat
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
