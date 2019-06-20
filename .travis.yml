@@ -1,12 +1,13 @@
 language: objective-c
-xcode-project: UITest/UITest.xcodeproj
+xcode-project: UITest/UITest/UITest.xcodeproj
 xcode-scheme: UITest
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
 osx_image: xcode10.2
 
 script:
 - set -o pipefail
-- xcodebuild test -project "$TRAVIS_XCODE_PROJECT" -scheme "$TRAVIS_XCODE_SCHEME" -destination "$TRAVIS_XCODE_DESTINATION"
+- xctool -project {{UITest/UITest/UITest.xcodeproj}} -scheme {{UITest}} build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
