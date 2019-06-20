@@ -1,1 +1,1 @@
-# test
+# test   [![Build Status](https://travis-ci.com/GodLeOnY/test.svg?branch=master)](https://travis-ci.com/GodLeOnY/test)[![codecov](https://codecov.io/gh/GodLeOnY/test/branch/master/graph/badge.svg)](https://codecov.io/gh/GodLeOnY/test)
