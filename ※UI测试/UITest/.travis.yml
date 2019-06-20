@@ -1,6 +1,7 @@
 language: objective-c
 xcode-project: UITest/UITest.xcodeproj
 xcode-scheme: UITest
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
 osx_image: xcode10.2
 
 script:
